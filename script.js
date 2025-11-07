@@ -10,7 +10,7 @@ const desc = document.getElementById("desc");
 searchBtn.addEventListener("click", () => {
   const city = cityInput.value.trim();
   if (city === "") {
-    alert("Inserisci il nome di una città!");
+    alert("Inserisci il nome di una città!!");
     return;
   }
 
