@@ -18,6 +18,35 @@
       <p id="desc"></p>
     </div>
   </div>
+<!-- ANIMAZIONE FOGLIE + RONDINI -->
+<script>
+  // --- FOGLIE CHE CADONO 🍂 ---
+  function createLeaf() {
+    const leaf = document.createElement("div");
+    leaf.classList.add("leaf");
+    leaf.style.left = Math.random() * window.innerWidth + "px";
+    leaf.style.animationDuration = 5 + Math.random() * 5 + "s";
+    leaf.style.opacity = Math.random();
+    leaf.style.transform = `scale(${Math.random() * 0.7 + 0.3})`;
+    document.body.appendChild(leaf);
+
+    setTimeout(() => leaf.remove(), 10000);
+  }
+  setInterval(createLeaf, 400);
+
+  // --- RONDINI CHE VOLANO 🕊️ ---
+  function createBird() {
+    const bird = document.createElement("div");
+    bird.classList.add("bird");
+    bird.style.top = Math.random() * (window.innerHeight * 0.5) + "px";
+    bird.style.animationDuration = 8 + Math.random() * 4 + "s";
+    bird.style.transform = Math.random() > 0.5 ? "scaleX(-1)" : "scaleX(1)";
+    document.body.appendChild(bird);
+
+    setTimeout(() => bird.remove(), 12000);
+  }
+  setInterval(createBird, 7000);
+</script>
 
   <script src="script.js"></script>
 </body>
