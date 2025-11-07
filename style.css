@@ -46,3 +46,48 @@ button:hover {
   margin-top: 10px;
   font-weight: bold;
 }
+
+/* 🌿 FOGLIE CHE CADONO */
+.leaf {
+  position: fixed;
+  top: -50px;
+  width: 25px;
+  height: 25px;
+  background-image: url('https://cdn-icons-png.flaticon.com/512/415/415733.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: fall linear forwards;
+  z-index: 0;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+  }
+}
+
+/* 🕊️ RONDINI CHE VOLANO */
+.bird {
+  position: fixed;
+  left: -60px;
+  width: 60px;
+  height: 60px;
+  background-image: url('https://cdn-icons-png.flaticon.com/512/616/616408.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: fly linear forwards;
+  z-index: 1;
+  opacity: 0.8;
+}
+
+@keyframes fly {
+  0% {
+    transform: translateX(0) scaleX(1);
+  }
+  100% {
+    transform: translateX(110vw) scaleX(1);
+  }
+}
